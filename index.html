@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Robocoupler - Document Management System</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="fav.jpg" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <div class="logo-container">
+        <img
+          src="robocoupler_logo.jpg"
+          alt="Robocoupler Logo"
+          class="logo-img"
+        />
+      </div>
+
+      <a class="nav-link" data-page="dashboard" href="#dashboard">
+        <i class="fas fa-tachometer-alt"></i> Dashboard
+      </a>
+
+      <a class="create-toggle" id="create-toggle" href="#">
+        <span style="flex: 1">Create</span>
+        <i
+          id="create-arrow"
+          class="fas fa-chevron-right"
+          style="margin-left: auto"
+        ></i>
+      </a>
+
+      <div class="create-menu hidden">
+        <a class="nav-link" data-page="invoice" href="#invoice"
+          ><i class="fas fa-file-invoice-dollar"></i> Invoice</a
+        >
+        <a class="nav-link" data-page="performance" href="#performance"
+          ><i class="fas fa-chart-line"></i> Performance</a
+        >
+        <a class="nav-link" data-page="quotation" href="#quotation"
+          ><i class="fas fa-file-alt"></i> Quotation</a
+        >
+      </div>
+    </div>
+
+    <div class="main-content">
+      <!-- Dashboard (REPLACED: new company homepage-like content) -->
+      <div id="dashboard-page" class="page-content">
+        <!-- HERO -->
+        <section class="hero" role="banner" aria-label="Robocoupler hero">
+          <div class="hero-left">
+            <h1>Robocoupler Techno Solutions Pvt Ltd</h1>
+            <p class="lead">
+              India's First Andro Humanoid Robots Manufacturing Company —
+              designing intelligent robots and automation solutions for industry
+              and education.
+            </p>
+
+            <div class="kpis" aria-hidden="true">
+              <div class="kpi">
+                <div class="k">100+</div>
+                <div class="sm">Robots Deployed</div>
+              </div>
+              <div class="kpi">
+                <div class="k">50+</div>
+                <div class="sm">Enterprise Clients</div>
+              </div>
+              <div class="kpi">
+                <div class="k">10+</div>
+                <div class="sm">Years Experience</div>
+              </div>
+            </div>
+
+            <div class="cta-group">
+              <button class="btn btn-white" id="btn-create-quotation">
+                <i class="fas fa-file-alt"></i> Create Quotation
+              </button>
+              <button class="btn btn-outline" id="btn-contact">
+                <i class="fas fa-phone"></i> Contact Sales
+              </button>
+            </div>
+          </div>
+
+          <div class="hero-right" aria-hidden="true">
+            <div
+              style="
+                background: rgba(255, 255, 255, 0.06);
+                border-radius: 10px;
+                padding: 14px;
+                text-align: center;
+              "
+            >
+              <img
+                src="robocoupler_logo.jpg"
+                alt="Robocoupler logo"
+                style="height: 56px; margin-bottom: 8px"
+              />
+              <div style="font-weight: 700; font-size: 1.05rem">
+                Robocoupler
+              </div>
+              <div style="font-size: 0.9rem; opacity: 0.95">
+                Automation • Robotics • Research
+              </div>
+            </div>
+
+            <div
+              style="
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px;
+                border-radius: 10px;
+              "
+            >
+              <div
+                style="
+                  font-size: 0.95rem;
+                  font-weight: 600;
+                  color: #fff;
+                  margin-bottom: 6px;
+                "
+              >
+                Quick Contact
+              </div>
+              <div style="font-size: 0.9rem">APSARA MVP COLONY, SECTOR -11</div>
+              <div style="font-size: 0.9rem">
+                VISAKHAPATNAM, ANDHRA PRADESH 530041
+              </div>
+              <div style="margin-top: 6px; font-weight: 600">
+                PH: +91 81426 78901
+              </div>
+              <div style="font-size: 0.85rem; opacity: 0.95">
+                Email: info@robocoupler.com
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ABOUT + SERVICES -->
+        <div class="row">
+          <div class="card about" style="flex: 2; min-width: 320px">
+            <h2>About Robocoupler</h2>
+            <p>
+              Robocoupler Techno Solutions Pvt Ltd is India’s First Andro
+              Humanoid Robots Manufacturing Company. Which is Located at
+              Visakhapatnam Andhra Pradesh. Which Deals with Comprehensive
+              Robotic Manufacturing and solutions with Real Time Embedded
+              Systems and Mechatronics.<br /><br />
+              Robocoupler is registered in India at Innovation valley
+              Visakhapatnam, which is a global company provider of comprehensive
+              Robotics solutions and services that deals with the design,
+              construction and application of robots, as well as computer
+              systems for their control, sensory feedback, and information
+              processing.
+            </p>
+            <p style="margin-top: 12px">
+              <strong>Vision:</strong> Democratize robotics for small and medium
+              enterprises in India.
+            </p>
+            <p style="margin-top: 8px">
+              <strong>GSTIN:</strong> 37AAYFR4673E1ZJ
+            </p>
+          </div>
+
+          <div class="card" style="flex: 1; min-width: 260px">
+            <h3 style="color: var(--primary-color); margin-bottom: 12px">
+              Key Services
+            </h3>
+            <div class="services">
+              <div class="service">
+                <i class="fas fa-robot"></i>
+                <h4>Humanoid Robots</h4>
+                <div>Design & supply of andro humanoid robots</div>
+              </div>
+              <div class="service">
+                <i class="fas fa-cogs"></i>
+                <h4>Industrial Automation</h4>
+                <div>Custom automation for manufacturing workflows</div>
+              </div>
+              <div class="service">
+                <i class="fas fa-graduation-cap"></i>
+                <h4>Training & Research</h4>
+                <div>Workshops & research partnerships with universities</div>
+              </div>
+              <div class="service">
+                <i class="fas fa-cloud"></i>
+                <h4>Cloud Management</h4>
+                <div>Remote fleet monitoring and analytics</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STATS -->
+        <div class="row" style="margin-bottom: 18px">
+          <div class="card" style="flex: 1; min-width: 260px">
+            <h3 style="color: var(--primary-color); margin-bottom: 12px">
+              Company Stats
+            </h3>
+            <div class="stats-grid">
+              <div class="stat">
+                <div class="num" id="stat-invoices">0</div>
+                <div class="label">Invoices</div>
+              </div>
+              <div class="stat">
+                <div class="num" id="stat-quotations">0</div>
+                <div class="label">Quotations</div>
+              </div>
+              <div class="stat">
+                <div class="num" id="stat-clients">50+</div>
+                <div class="label">Clients</div>
+              </div>
+              <div class="stat">
+                <div class="num" id="stat-robots">100+</div>
+                <div class="label">Robots Deployed</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CONTACT -->
+          <div class="card" style="flex: 1; min-width: 260px">
+            <h3 style="color: var(--primary-color); margin-bottom: 12px">
+              Contact & Office
+            </h3>
+            <div class="contact">
+              <div class="left">
+                <i
+                  class="fas fa-map-marker-alt"
+                  style="font-size: 1.6rem; color: var(--primary-color)"
+                ></i>
+              </div>
+              <div class="right">
+                <p><strong>Address</strong></p>
+                <p>
+                  APSARA MVP COLONY, SECTOR -11, VISAKHAPATNAM, ANDHRA PRADESH
+                  530041
+                </p>
+                <p style="margin-top: 8px">
+                  <strong>Phone</strong><br />+91 81426 78901
+                </p>
+                <p style="margin-top: 6px">
+                  <strong>Email</strong><br />info@robocoupler.com
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- small footer note -->
+        <div
+          style="
+            text-align: center;
+            color: #666;
+            font-size: 0.95rem;
+            margin-top: 6px;
+          "
+        >
+          © Robocoupler Techno Solutions Pvt Ltd — All rights reserved.
+        </div>
+      </div>
+
+      <!-- Invoice -->
+      <div id="invoice-page" class="page-content hidden">
+        <!-- invoice content (unchanged) -->
+        <div
+          class="form-container"
+          id="invoice-form-container"
+          style="max-width: 900px; margin: auto; box-shadow: 0 0 20px #e3e3e3"
+        >
+          <div
+            class="pdf-header"
+            style="padding: 20px 0 10px 0; border-bottom: 2px solid #0d47a1"
+          >
+            <img
+              src="robocoupler_logo.jpg"
+              alt="Robocoupler Logo"
+              style="height: 60px; margin-bottom: 10px"
+            />
+            <h1 style="font-size: 2em; margin-bottom: 5px">
+              Robocoupler Techno Solutions Pvt Ltd
+            </h1>
+            <div style="font-size: 1.1em; font-weight: 500">
+              India's First Andro Humanoid Robots Manufacturing Company
+            </div>
+            <div style="margin-top: 5px; font-size: 1em">
+              APSARA MVP COLONY, SECTOR -11, VISAKHAPATNAM, ANDHRA PRADESH
+              530041
+            </div>
+            <div style="font-size: 1em">
+              PH: +91 81426 78901 | Email: info@robocoupler.com
+            </div>
+            <div style="margin-top: 5px; font-size: 1em">
+              GSTIN: <span id="invoice-gstin-val">37AAYFR4673E1ZJ</span>
+            </div>
+          </div>
+
+          <div class="form-section" style="border-bottom: none">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 10px;
+              "
+            >
+              <div>
+                <strong>Invoice No:</strong>
+                <input
+                  type="text"
+                  id="invoice-number"
+                  readonly
+                  style="width: 120px; display: inline-block"
+                />
+                <strong style="margin-left: 30px">Dated:</strong>
+                <input
+                  type="text"
+                  id="invoice-date"
+                  readonly
+                  style="width: 120px; display: inline-block"
+                />
+              </div>
+              <div>
+                <strong>HSN CODE:</strong>
+                <input
+                  type="text"
+                  id="invoice-hsn-code"
+                  value="852380 SELF"
+                  style="width: 120px; display: inline-block"
+                />
+              </div>
+            </div>
+
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 10px;
+              "
+            >
+              <div>
+                <strong>Name of the Project:</strong>
+                <input
+                  type="text"
+                  id="invoice-project-name"
+                  style="width: 220px; display: inline-block"
+                />
+              </div>
+              <div>
+                <strong>Mode of Payment:</strong>
+                <select
+                  id="invoice-payment-method"
+                  style="width: 120px; display: inline-block"
+                >
+                  <option value="Cash">Cash</option>
+                  <option value="Card">Card</option>
+                  <option value="UPI">UPI</option>
+                  <option value="Netbanking">Netbanking</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section" style="border-bottom: none">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 10px;
+              "
+            >
+              <div>
+                <strong>Customer Name:</strong>
+                <input
+                  type="text"
+                  id="invoice-customer-name"
+                  style="width: 220px; display: inline-block"
+                />
+                <strong style="margin-left: 30px">Customer ID/Code:</strong>
+                <input
+                  type="text"
+                  id="invoice-customer-id"
+                  readonly
+                  style="width: 120px; display: inline-block"
+                />
+              </div>
+            </div>
+            <div>
+              <strong>Billing Address:</strong><br />
+              <textarea
+                id="invoice-billing-address"
+                rows="2"
+                style="width: 100%; margin-top: 5px"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="form-section" style="border-bottom: none">
+            <h2 style="margin-bottom: 10px">Items/Services</h2>
+            <table
+              class="items-table"
+              id="invoice-items-table"
+              style="margin-top: 0"
+            >
+              <thead>
+                <tr style="background: #e3f2fd">
+                  <th>Sno</th>
+                  <th>Making Duration</th>
+                  <th>Description of implementing</th>
+                  <th>Quantity</th>
+                  <th>Unit price</th>
+                  <th>Total</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+
+            <button
+              class="add-item-btn"
+              id="add-invoice-item"
+              style="margin-top: 10px"
+            >
+              Add Item
+            </button>
+            <!-- Terms & Conditions section -->
+            <div class="terms-section" style="margin-top: 24px">
+              <strong>Terms & Conditions:</strong>
+              <textarea
+                id="invoice-terms"
+                rows="3"
+                style="width: 100%; margin-top: 5px"
+              ></textarea>
+            </div>
+          </div>
+
+          <div
+            class="summary-box"
+            style="
+              border-top: 2px solid #0d47a1;
+              padding-top: 10px;
+              width: 100%;
+              max-width: 350px;
+              margin-left: auto;
+            "
+          >
+            <div class="summary-row">
+              <span class="label">Subtotal:</span
+              ><span id="invoice-subtotal-val">0.00</span>
+            </div>
+            <div class="summary-row">
+              <span class="label">CGST (9%):</span
+              ><span id="invoice-cgst-val">0.00</span>
+            </div>
+            <div class="summary-row">
+              <span class="label">SGST (9%):</span
+              ><span id="invoice-sgst-val">0.00</span>
+            </div>
+            <div class="summary-row">
+              <span class="label">Total:</span
+              ><span class="total-amount" id="invoice-total-val">0.00</span>
+            </div>
+            <!-- Final Total section -->
+            <div
+              class="summary-row"
+              style="
+                margin-top: 12px;
+                border-top: 1px solid #ddd;
+                padding-top: 8px;
+              "
+            >
+              <span class="label" style="font-weight: 600">Final Total</span>
+            </div>
+            <div class="summary-row">
+              <span class="label">18% CGST</span>
+            </div>
+            <div class="summary-row">
+              <span class="label">SGST</span>
+            </div>
+            <div class="summary-row">
+              <span class="label" style="font-weight: 600">Inclusive GST</span>
+            </div>
+          </div>
+
+          <div class="buttons-container" style="margin-top: 20px">
+            <button class="btn btn-secondary" id="clear-invoice">Clear</button>
+            <button class="btn btn-primary" id="save-invoice">
+              Save Document
+            </button>
+            <button class="btn btn-primary" id="generate-invoice-pdf">
+              Generate PDF
+            </button>
+          </div>
+
+          <!-- Bank Details section -->
+          <div
+            class="bank-details"
+            style="
+              margin-top: 30px;
+              border-top: 1px solid #ddd;
+              padding-top: 10px;
+            "
+          >
+            <table style="width: 100%; font-size: 1em">
+              <tr>
+                <td><strong>Acc. Holder</strong></td>
+                <td>: ROBOCOUPLER TECHNO SOLUTIONS</td>
+              </tr>
+              <tr>
+                <td><strong>Acc. No</strong></td>
+                <td>
+                  :
+                  <input
+                    type="text"
+                    id="invoice-bank-accno"
+                    style="width: 180px"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Bank Name</strong></td>
+                <td>: STATE BANK OF INDIA</td>
+              </tr>
+              <tr>
+                <td><strong>IFSC Code</strong></td>
+                <td>: SBIN00s</td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- Company Stamp & Signature section -->
+          <div
+            class="stamp-signature"
+            style="margin-top: 24px; text-align: right; font-size: 1em"
+          >
+            <span>Company Stamp &amp; Signature</span>
+          </div>
+
+          <div
+            class="pdf-footer"
+            style="
+              display: block;
+              text-align: center;
+              margin-top: 30px;
+              font-size: 1em;
+              color: #333;
+              border-top: 1px solid #ddd;
+              padding-top: 10px;
+            "
+          >
+            <div>
+              APSARA MVP COLONY, SECTOR -11, VISAKHAPATNAM, ANDHRA PRADESH
+              530041
+            </div>
+            <div>PH: +91 81426 78901 | Email: info@robocoupler.com</div>
+            <div style="margin-top: 5px">Thank you for your business!</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Performance (unchanged) -->
+      <div id="performance-page" class="page-content hidden">
+        <h1 class="page-header">Performance Report</h1>
+        <div class="form-container">
+          <table class="performance-table" id="performance-table">
+            <thead>
+              <tr>
+                <th>Sno</th>
+                <th>Invoice No</th>
+                <th>Name of the Project</th>
+                <th>Making Duration</th>
+                <th>Description of Implementing</th>
+                <th>Quantity</th>
+                <th>Unit Price</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody id="performance-tbody"></tbody>
+          </table>
+          <div id="revenue-summary" style="margin-top: 30px">
+            <div
+              style="
+                font-size: 1.5em;
+                font-weight: 700;
+                margin-bottom: 18px;
+                color: #0d47a1;
+                text-align: center;
+                letter-spacing: 1px;
+              "
+            >
+              Revenue Summary
+            </div>
+            <div class="revenue-cards-grid">
+              <div class="revenue-card invoices">
+                <div class="revenue-icon">
+                  <i class="fas fa-file-invoice-dollar"></i>
+                </div>
+                <div class="revenue-label">Revenue from Invoices</div>
+                <div class="revenue-value" id="revenue-invoices">₹0.00</div>
+              </div>
+              <div class="revenue-card quotations">
+                <div class="revenue-icon"><i class="fas fa-file-alt"></i></div>
+                <div class="revenue-label">Revenue from Quotations</div>
+                <div class="revenue-value" id="revenue-quotations">₹0.00</div>
+              </div>
+              <div class="revenue-card today">
+                <div class="revenue-icon">
+                  <i class="fas fa-calendar-day"></i>
+                </div>
+                <div class="revenue-label">Revenue Today</div>
+                <div class="revenue-value" id="revenue-today">₹0.00</div>
+              </div>
+              <div class="revenue-card month">
+                <div class="revenue-icon">
+                  <i class="fas fa-calendar-alt"></i>
+                </div>
+                <div class="revenue-label">Revenue This Month</div>
+                <div class="revenue-value" id="revenue-month">₹0.00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quotation (unchanged) -->
+      <div id="quotation-page" class="page-content hidden">
+        <h1 class="page-header">Create Quotation</h1>
+        <div class="form-container" id="quotation-form-container">
+          <div class="pdf-header">
+            <p>GSTIN: <span id="quotation-gstin-val">37AAYFR4673E1ZJ</span></p>
+            <h1>Robocoupler</h1>
+            <p>Techno Solutions Pvt Ltd</p>
+            <p>India's First Andro Humanoid Robots Manufacturing Company</p>
+          </div>
+
+          <div class="form-section">
+            <h2>Document Details</h2>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="quotation-number">Quotation No:</label>
+                <input type="text" id="quotation-number" readonly />
+              </div>
+              <div class="form-group">
+                <label for="quotation-date">Dated:</label>
+                <input type="text" id="quotation-date" readonly />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="quotation-project-name">Name of the Project:</label>
+                <input type="text" id="quotation-project-name" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="quotation-hsn-code">HSN CODE:</label>
+                <input
+                  type="text"
+                  id="quotation-hsn-code"
+                  value="852380 SELF"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h2>Buyer's Name & Address</h2>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="quotation-customer-name">Customer Name</label>
+                <input type="text" id="quotation-customer-name" />
+              </div>
+              <div class="form-group">
+                <label for="quotation-customer-id">Customer ID/Code</label>
+                <input type="text" id="quotation-customer-id" readonly />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="quotation-billing-address">Billing Address</label>
+              <textarea id="quotation-billing-address" rows="3"></textarea>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h2>Items/Services</h2>
+            <table class="items-table" id="quotation-items-table">
+              <thead>
+                <tr>
+                  <th>Sno</th>
+                  <th>Making Duration</th>
+                  <th>Description of implementing</th>
+                  <th>Quantity</th>
+                  <th>Unit price</th>
+                  <th>Total</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+
+            <button class="add-item-btn" id="add-quotation-item">
+              Add Item
+            </button>
+          </div>
+
+          <div class="summary-box">
+            <div class="summary-row">
+              <span class="label">Subtotal:</span
+              ><span id="quotation-subtotal-val">0.00</span>
+            </div>
+            <div class="summary-row">
+              <span class="label">CGST (9%):</span
+              ><span id="quotation-cgst-val">0.00</span>
+            </div>
+            <div class="summary-row">
+              <span class="label">SGST (9%):</span
+              ><span id="quotation-sgst-val">0.00</span>
+            </div>
+            <div class="summary-row">
+              <span class="label">Total:</span
+              ><span class="total-amount" id="quotation-total-val">0.00</span>
+            </div>
+          </div>
+
+          <div class="buttons-container">
+            <button class="btn btn-secondary" id="clear-quotation">
+              Clear
+            </button>
+            <button class="btn btn-primary" id="save-quotation">
+              Save Document
+            </button>
+            <button class="btn btn-primary" id="generate-quotation-pdf">
+              Generate PDF
+            </button>
+          </div>
+
+          <div class="pdf-footer">
+            <p>
+              APSARA MVP COLONY, SECTOR -11, VISAKHAPATNAM, ANDHRA PRADESH
+              530041
+            </p>
+            <p>PH: +91 81426 78901 | Email: info@robocoupler.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

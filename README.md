@@ -64,6 +64,5 @@ This project is open source under the MIT License. See `LICENSE` for details.
 - Robocoupler Techno Solutions Pvt Ltd
 - jsPDF, html2canvas, Font Awesome
 
----
 
-For questions or support, contact info@robocoupler.com
+
